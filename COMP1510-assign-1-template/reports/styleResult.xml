@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.10">
+<file name="C:\Users\jay\workspace\COMP1510-assign-1-template\src\q1\Stickman.java">
+</file>
+<file name="C:\Users\jay\workspace\COMP1510-assign-1-template\src\q2\SecondsConvert.java">
+</file>
+<file name="C:\Users\jay\workspace\COMP1510-assign-1-template\src\q3\Pack.java">
+</file>
+<file name="C:\Users\jay\workspace\COMP1510-assign-1-template\src\q4\Cylinder.java">
+</file>
+<file name="C:\Users\jay\workspace\COMP1510-assign-1-template\src\q5\BusinessCard.java">
+<error line="60" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="62" column="9" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="64" column="9" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="65" column="9" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+</checkstyle>

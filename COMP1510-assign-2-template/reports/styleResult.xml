@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.10">
+<file name="C:\Users\jay\workspace\COMP1510-assign-2-template\src\q1\TriangleArea.java">
+</file>
+<file name="C:\Users\jay\workspace\COMP1510-assign-2-template\src\q2\CylinderStats.java">
+</file>
+<file name="C:\Users\jay\workspace\COMP1510-assign-2-template\src\q3\Book.java">
+<error line="154" column="9" severity="warning" message="Executable statement count is 31 (max allowed is 30)." source="com.puppycrawl.tools.checkstyle.checks.sizes.ExecutableStatementCountCheck"/>
+</file>
+<file name="C:\Users\jay\workspace\COMP1510-assign-2-template\src\q4\TrafficLight.java">
+</file>
+</checkstyle>
