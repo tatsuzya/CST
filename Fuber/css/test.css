@@ -1,0 +1,655 @@
+/*-----------------------------general setup----------------------------------*/
+
+body,
+html {
+    background-color: #f5fbf7;
+}
+
+.home {
+    height: 100%;
+}
+
+.panel {
+    background-color: #f5fbf7;
+    height: 100%;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, .05);
+}
+
+.menu {
+    background-color: #91e0e0;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    color: #fff;
+}
+
+.home_button {
+    position: absolute;
+    top: 1.5%;
+    left: 2.5%;
+    margin: 1%;
+    color: black;
+}
+
+
+/*-----------------------------------home-----------------------------------*/
+
+.home_image {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.home_header {
+    text-align: center;
+}
+
+#home_login {
+    position: absolute;
+    top: 16px;
+    right: 3%;
+    border: 1.5px solid lightblue;
+}
+
+#home_logo {
+    width: 80%;
+    height: 20%;
+    margin: 10% 0 0 8%;
+}
+
+.home_icon {
+    padding: 10%;
+    width: 100%;
+    padding-left: 35%;
+    border-radius: 20px;
+}
+
+.home_nav_icon {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    position: absolute;
+    left: 8%;
+    top: 30%;
+    color: white;
+}
+
+.home_arrow {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    position: absolute;
+    right: 1%;
+    top: 35%;
+    color: white;
+    font-size: 250%;
+}
+
+#home_kitchen {
+    background-color: #92F04E;
+    margin-bottom: 10px;
+}
+
+#home_qr {
+    background-color: #45D9F6;
+    margin-bottom: 10px;
+}
+
+#home_recipes {
+    background-color: #F6BB45;
+    margin-bottom: 10px;
+}
+
+#home_apps {
+    background-color: #F64545;
+}
+
+#home_sections {
+    background-color: #d7f0e1;
+    overflow: auto;
+    padding: 4% 2%;
+    border-radius: 10px;
+}
+
+.home_nav {
+    color: white;
+    font-weight: bolder;
+    font-size: 170%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5% 0 5% 0;
+}
+
+.home_click:hover {
+    text-decoration: none;
+}
+
+.home_click:visited {
+    color: black;
+}
+
+.home_click:active {
+    color: black;
+    text-decoration: none;
+}
+
+.home_click:link {
+    color: black;
+}
+
+
+/*------------------------------Login------------------------------*/
+
+.login_section {
+    display: table;
+    margin: 15% auto;
+    text-align: center;
+    background-color: white;
+    padding: 10% 7% 20% 7%;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #888888;
+    height: 100%;
+}
+
+.login_section input {
+    margin-bottom: 10px;
+    border: 1px solid lightgrey;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+#Sign_in {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/*---------------------------------------app--------------------------------*/
+
+#apps_header {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.apps_title {
+    font-weight: bolder;
+}
+
+.app_section_detail {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.related_apps {
+    border: 1px solid black;
+    padding: 20px 0 20px 10px;
+    background-color: #f5fbf7;
+    border-bottom: 1px solid black;
+}
+
+.related_apps2 {
+    border-top-style: hidden;
+    border: 1px solid black;
+    padding: 20px 10px 20px 0;
+    background-color: #f5fbf7;
+}
+
+.app_section {
+    color: #626864;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    border: 1px solid #b3e0c6;
+    background-color: #b3e0c6;
+    padding: 7px;
+    border-radius: 30px;
+}
+
+#apps_games {
+    margin-top: 45px;
+}
+
+.app_logo {
+    width: 120px;
+    height: 110px;
+    margin-top: 5%;
+}
+
+.app_name {
+    margin-top: 10px;
+    color: #538EF5;
+    font-weight: bold;
+}
+
+.app_name:hover {
+    text-decoration: underline;
+}
+
+.app_name:visited {
+    color: black;
+}
+
+.app_info {
+    text-align: center;
+}
+
+.app_detail {
+    word-wrap: break-word;
+}
+
+#apps_header .fa-users {
+    color: #E880C7;
+}
+
+.apps_page {
+    background-color: #EFF9F3;
+}
+
+
+/* My Kitchen */
+
+#ingredients {
+    font-weight: bolder;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: #c4ead4;
+    border-radius: 25px;
+}
+
+#ingredients form {
+    text-align: center;
+}
+
+#ingredients ul {
+    margin: 0.75em 0;
+    padding: 0 1em;
+    list-style: none;
+}
+
+#ingredientList li:before {
+    content: "";
+    border-color: transparent #111;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+}
+
+#ingredients input[type="text"] {
+    border: 2px solid black;
+}
+
+
+/* SPOON INPUT */
+
+.recipe_list {
+    border-top: 1px solid black;
+}
+
+.recipe_list:last-child {
+    border-bottom: 1px solid black;
+}
+
+.recipe_name {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.recipe_id {
+    color: grey;
+    margin: 0 10px 10px 0;
+}
+
+#picture {
+    margin: 5% 2% 5% 0;
+    border: 1.5px solid grey;
+    border-radius: 7px;
+    width: 30%;
+    height: 100px;
+    padding: 0;
+}
+
+.btn-info {
+    margin-bottom: 4%;
+    padding: 4px 6px 4px 6px;
+}
+
+
+/* Recipe Details */
+
+#recipe_page {
+    margin: 0;
+    padding: 0;
+}
+
+#recipe_name {
+    text-align: center;
+    margin: 10px 0 20px 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 27px;
+}
+
+.recipe_panel {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+#recipe_image {
+    position: fixed;
+    width: 100%;
+    height: 40%;
+    top: 0;
+}
+
+#instructions {
+    margin-top: 65%;
+    background-color: #f5fbf7;
+    z-index: 0;
+}
+
+#recipe_content {
+    margin: 25px;
+}
+
+.prep {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.recipe_time {
+    position: absolute;
+    right: 0;
+    margin-right: 25px;
+    padding-right: 10px;
+}
+
+#ingredients_section {
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid grey;
+    border-top: 1.5px solid grey;
+    border-radius: 8px;
+}
+
+.recipe_header {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#ingredient_list {
+    margin-left: 5px;
+    line-height: normal;
+}
+
+#recipe_step {
+    margin-bottom: 25px;
+}
+
+#step_number {
+    font-weight: bold;
+    font-size: 110%;
+    color: #696969;
+}
+
+#step_detail {
+    margin: 0;
+}
+
+
+/* Ingredients Page */
+
+#login_prompt {
+    margin: 10%;
+    display: block;
+    text-align: center;
+    border: 3px solid #4C4C4C;
+    padding: 9%;
+    padding-bottom: 12%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#login_prompt span {
+    font-size: 150%;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.fa-exclamation {
+    color: red;
+    margin-bottom: 5%;
+}
+
+#login_choice {
+    font-size: 135%;
+    margin-top: 5%;
+    font-weight: bolder;
+}
+
+#login_prompt a {
+    margin: 3%;
+}
+
+.color {
+    background-color: yellow;
+}
+
+#Kitchen_header {
+    margin-bottom: 50px;
+}
+
+.items {
+    margin: 10px 30px 10px 30px;
+    border-top: 1px solid black;
+}
+
+.items:last-child {
+    border-bottom: 1px solid black;
+}
+
+#item_list {
+    margin-left: 10px;
+}
+
+#food_name {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    padding-left: 0;
+}
+
+.btn-danger {
+    padding: 4px;
+}
+
+.generate {
+    margin-top: 20px;
+}
+
+.food_input {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+#food_box {
+    text-align: center;
+}
+
+.input_title {
+    float: left;
+    font-weight: bold;
+}
+
+
+/*-----------------------------------------nav--------------------------------------*/
+
+.sidebar-nav {
+    margin-top: 15%;
+    padding-left: 15%;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    border-bottom: solid 1.5px;
+    margin-right: 15%;
+    padding-top: 4%;
+    margin-top: 1%;
+}
+
+.fa {
+    padding-right: 10px;
+}
+
+.sidebar-nav li {
+    line-height: 50px;
+    font-size: 130%;
+}
+
+.slideout-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 256px;
+    overflow-y: scroll;
+    display: none;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+}
+
+.slideout-menu {
+    right: auto;
+}
+
+
+/*------------------------------------hamburger-------------------------------*/
+
+.btn-hamburger {
+    position: absolute;
+    border: none;
+    top: 12px;
+    left: 0;
+    outline: none;
+    width: 50px;
+    background-color: transparent;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/*            QR SCANNER            */
+
+video {
+    width: 65%;
+    margin: 10% auto;
+    display: block;
+    border-top: 2px groove grey;
+    border-bottom: 2px groove grey;
+    padding: 20px;
+    border-radius: 15%;
+}
+
+#qr_buttons {
+    margin: 30px;
+    display: block;
+    text-align: center;
+    display: none;
+}
+
+#qr_buttons button {
+    margin: 1%;
+    display: none;
+}
+
+
+/*-----------------------checkbox-------------------*/
+
+#checkboxes {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: -1px;
+}
+
+label.checkbox-label input[type=checkbox] {
+    position: relative;
+    vertical-align: middle;
+    bottom: -1;
+}
+
+#checkbox {
+    width: 20px;
+    height: 20px;
+    margin-left:5px;
+}
+
+.checkbox {
+    float: right;
+    margin-right:30px;
+}

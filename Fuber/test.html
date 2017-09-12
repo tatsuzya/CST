@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>attr demo</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+    <form action="">
+        <input type="checkbox" id="checkbox" name="food">apple<br>
+        <input type="checkbox" id="checkbox" name="food">sugar<br>
+        <input type="checkbox" id="checkbox" name="food">crab<br>
+        <input type="checkbox" id="checkbox" name="food">beef<br>
+        <input type="checkbox" id="checkbox" name="food">chicken<br>
+        <input type="checkbox" id="checkbox" name="food">pork<br>
+        <input type="checkbox" id="checkbox" name="food">lamb<br>
+        <input type="checkbox" id="checkbox" name="food">liver<br>
+        <input type="checkbox" id="checkbox" name="food">salt<br>
+        <input type="checkbox" id="checkbox" name="food">pepper<br>
+        <input type="checkbox" id="checkbox" name="food">strawberry<br>
+        <span id="result"></span>
+    </form>
+
+    <script>
+        $('#checkbox').click(function() {
+            if ($(this).prop("checked") == true) {
+                $("#checkbox").addClass("checked");
+            } else if ($(this).prop("checked") == false) {
+                $("#checkbox").removeClass("checked");
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

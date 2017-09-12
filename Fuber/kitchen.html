@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fuber Kitchen</title>
+    <script src="js/ingredient.js"></script>
+    <link rel="stylesheet" href="css/media.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------------------------css------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/test.css">
+    <!------------------------js-------------------------------->
+    <script src="js/jquery.js"></script>
+</head>
+
+<body onload="addField()">
+    <a href="index.html"><i class="fa fa-home fa-4x"></i></a>
+    <div id="apps_header">
+        <i class="fa fa-cutlery fa-5x" aria-hidden="true"></i>
+        <h1>My Kitchen</h1>
+    </div>
+
+    <div id="ingredients">
+        <form name="myform" action="spoon.php" method="post">
+            <ul id="ingredientList">
+                <li><input type="text" id="textBox" name="ingredient" /></li>
+            </ul>
+
+            <button id="add">Add another ingredient</button>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <script src="js/navbar.js"></script>
+</body>
+
+</html>
