@@ -1,0 +1,992 @@
+    /* Reset html */
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* index.html */
+    /* homepage banner */
+
+    #home-banner {
+    background-image: url("../Images/jump21.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 100%;
+	  background-attachment: fixed;
+	  background-position: center center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%,0 88%);
+}
+
+#home-center {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#banner-text {
+    background-color: rgba(220, 220, 220, 0.04);
+    font-family: "proxima-nova", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 75px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    font-weight: 800;
+    color: white;
+}
+
+#home-body {
+  position: relative;
+}
+
+/* button to navigate to home content */
+
+#home-button {
+    border: 2px solid #fff;
+    background-color: transparent;
+    font-family: "proxima-nova", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    text-decoration: none;
+}
+
+
+    /* alignment for headings */
+
+    .header-pic {
+        background-size: 100%;
+        opacity: 0.8;
+        padding: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: grey;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .headers {
+        opacity: 1.5;
+        color: black;
+        font-size: 2.5em;
+        font-weight: bold;
+        padding: 55px;
+    }
+
+    .home-content {
+        margin: 20px;
+    }
+
+/* Home page Content */
+
+#mission {
+  overflow: auto;
+  clear: both;
+  margin: 0 auto;
+  width: 75%;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+#mission-image {
+  margin: 0;
+  float: right;
+  margin-right: 50px;
+}
+
+#mission-head {
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  padding-top: 70px;
+  margin: 0;
+}
+
+.sections {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-size: 400px 400px;
+}
+
+.clickable {
+  width: 300px;
+  height: 300px;
+}
+
+#section-gear {
+  background-image: url("../Images/gifs/tailgrabStill.gif");
+  float: left;
+  border-radius: 1.5%;
+}
+
+#section-gear:hover{
+  background-image: url("../Images/gifs/tailgrab.gif");
+  opacity: 0.3;
+  border-radius: 1.5%;
+}
+
+#section-slopes {
+  background-image: url("../Images/gifs/jumpStill.gif");
+  float: right;
+  border-radius: 1.5%;
+}
+
+#section-slopes:hover {
+  background-image: url("../Images/gifs/jump.gif");
+  opacity: 0.3;
+  border-radius: 1.5%;
+}
+
+#section-about {
+  background-image: url("../Images/gifs/cliffStill.gif");
+  float: left;
+  border-radius: 1.5%;
+}
+
+#section-about:hover {
+  background-image: url("../Images/gifs/cliff.gif");
+  opacity: 0.3;
+  border-radius: 1.5%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#gear-paragraph {
+  float: right;
+  width: 340px;
+  margin-top: 20px;
+  background-color: rgba(220,220,220, 0.1);
+  padding: 20px;
+  height: 270px;
+  border-radius: 8%;
+}
+
+.contentMid .row {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#slopes-paragraph {
+    float: left;
+    width: 340px;
+    margin-top: 20px;
+    background-color: rgba(220,220,220, 0.1);
+    padding: 20px;
+    height: 270px;
+    border-radius: 8%;
+}
+
+#about-paragraph {
+  float: right;
+  width: 340px;
+  margin-top: 20px;
+  background-color: rgba(220,220,220, 0.1);
+  padding: 20px;
+  height: 270px;
+  border-radius: 8%;
+}
+
+
+.sub-contain {
+  width: 960px;
+  height: 400px;
+}
+
+#missionicon {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 10px;
+    background-color: rgba(82, 183, 242, 0.9);
+    border: solid 2.5px rgba(220,220,220, 1);
+    border-radius: 12%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#banner-phrase {
+    font-family: "proxima-nova", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3.5px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+}
+
+#indexContent {
+    border-top: double 3px grey;
+   border-bottom: double 3px grey;
+    padding-left: 50px;
+ padding-right: 50px;
+}
+
+.contentMid .col {
+  margin-top: 60px;
+}
+
+.container {
+  padding: 60px;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.slide-img {
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 500px;
+  padding-right: 10px;
+}
+
+.img-r {
+  margin: 0 auto;
+  max-width: 500px;
+  max-height: 500px;
+  padding-left: 10px;
+}
+
+#gallery {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home-about {
+  font-size: 1.2em;
+}
+
+.container .col-sm-12 {
+  border-style: solid;
+  background-color: rgba(220,220,220, 0.1);
+  border-width: 1.8px;
+  padding-bottom: 55px;
+  border-color: rgba(220, 220, 220, 0.3);
+  border-radius: 3%;
+}
+
+
+
+    /* banner for each sub page */
+
+    .bannerGear {
+        background-image: url("../Images/gearBanner2.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+    .bannerAbout {
+        background-image: url("../Images/banner5.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;;
+    }
+
+    .bannerSlopes {
+        background-image: url("../Images/mountain4.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+    .bannerForum {
+        background-image: url("../Images/banner6.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+    .bannerMember {
+        background-image: url("../Images/stunt.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    /* Navigation Bar */
+
+    * {
+        border-radius: 0;
+    }
+
+    nav {
+      text-transform: uppercase;
+    }
+
+    .navbar {
+        height: 60px;
+        position: fixed;
+    }
+
+    body {
+        background: #ccc;
+        font-family: helvetica, arial, serif;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        background-color: #222;
+        display: block;
+        margin-top: 0px;
+    }
+
+    .dropdown:hover .dropdown-menu a {
+        color: dimgrey;
+    }
+
+    .wrap {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: -25px;
+        height: 60px;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        z-index: 9999;
+    }
+
+    ul {
+        padding-top: 8px;
+    }
+
+    .resize {
+        height: 60px;
+        width: 70px;
+    }
+
+    .navbar-inverse {
+        background-color: white;
+        color: black;
+    }
+    /* positioning for page content */
+
+    .contentMid {
+        position: relative;
+        text-align: center;
+        max-width: 1000px;
+        margin: 20px auto 20px auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .aboutUsContent {
+        text-align: justify;
+        text-indent: 2em;
+    }
+    /*Gear Page*/
+
+    .gearContent {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+    }
+.gearContent .gearRow {
+    margin: 20px;
+}
+
+.accordionHeader {
+  text-transform: uppercase;
+}
+
+    .gearContent .accordionHeader {
+        background-color: #d3d3d3;
+        padding: 2px;
+        cursor: pointer;
+        font-weight: bold;
+        height: 100px;
+    }
+
+    .accordionHeader span {
+        position: relative;
+        top: 20px;
+        font-weight: bolder;
+        color: black;
+        font-size: 3em;
+    }
+     .necessitiesContent .accordionContent {
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .accessoriesContent .accordionContent {
+        display: none;
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+.shopsContent .accordionContent {
+
+        display: none;
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto
+}
+
+.accordionContent h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+#westEndMap {
+   height: 300px;
+    width:300px;
+}
+#northVanMap {
+   height: 300px;
+    width:300px;
+}
+
+    /* Gear page Images */
+
+    .Outerwear {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .Snowboard {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .Bindings {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .Boots {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+.gearImages {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 160px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#backToTop:hover {
+  background-color: white;
+    color:black;
+    border:solid;
+}
+
+    /* Slopes page Images */
+
+    .Location {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .Slopes {
+        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .SlopesCard img {
+        height: 465px;
+        width: 465px;
+        opacity: .9;
+        border-radius:10px;
+        box-shadow: 10px 10px 5px #888;
+
+    }
+
+    .SlopesCard .SlopesText {
+        position: absolute;
+        font-family: 'Shadows Into Light', cursive;
+        font-size: 4em;
+        background-color: white;
+        opacity: .8;
+        top: 60px;
+        height: 1.5em;
+        width: 94%;
+        text-transform: uppercase;
+    }
+
+    .SlopesCard .SlopesPreview {
+        position: absolute;
+        font-family: cursive;
+        font-size: 1.2em;
+        opacity: .8;
+        top: 190px;
+        width: 90%;
+        right: 25px;
+        display: none;
+    }
+.closeBtn{
+    position:absolute;
+    right:-60px;
+    width:52px;
+    height:52px;
+    background-image:url("../Images/Slopes/close2.png");
+    background-repeat: no-repeat;
+     border: none;
+  outline: none;
+    background-color:transparent;
+}
+.closeBtn:hover {
+    background-image:url("../Images/Slopes/close3.png");
+}
+    .BigWhiteContent {
+        display:none;
+        background-color:white;
+        border: solid;
+        border-radius: 25px;
+        padding:15px;
+        z-index:0;
+        position:absolute;
+    width:100%;
+    top:145px;
+}
+
+    .CypressContent {
+            display:none;
+        background-color:white;
+        border: solid;
+        border-radius: 25px;
+        padding:15px;
+        z-index:0;
+        position:absolute;
+    width:100%;
+    top:145px;
+}
+.grouseContent{
+    display:none;
+        background-color:white;
+        border: solid;
+        border-radius: 25px;
+        padding:15px;
+        z-index:0;
+        position:absolute;
+    width:100%;
+    top:630px;
+}
+.seymourContent{
+    display:none;
+        background-color:white;
+        border: solid;
+        border-radius: 25px;
+        padding:15px;
+        z-index:0;
+        position:absolute;
+    width:100%;
+    top:630px;
+}
+
+.sunPeaksContent{
+    display:none;
+        background-color:white;
+        border: solid;
+        border-radius: 25px;
+        padding:15px;
+        z-index:0;
+        position:absolute;
+    width:100%;
+    top:1110px;
+}
+
+.whistlerContent{
+    display:none;
+        background-color:white;
+        border: solid;
+        border-radius: 25px;
+        padding:15px;
+        z-index:0;
+        position:absolute;
+    width:100%;
+   top:1110px;
+}
+
+
+#bigWhiteMap {
+     height: 290px;
+    width:290px;
+}
+#cypressMap {
+     height: 290px;
+    width:290px;
+
+}
+#grouseMap {
+   height: 290px;
+    width:290px;
+
+}
+#seymourMap {
+     height: 290px;
+    width:290px;
+
+}
+#sunPeaksMap {
+       height: 290px;
+    width:290px;
+}
+#whistlerMap {
+    height: 290px;
+    width:290px;
+}
+
+    /* Forum Page */
+
+    .forumContent {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .forumboxtitle {
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    th {
+      text-transform: uppercase;
+    }
+
+    .forumComment table,
+    td,
+    th {
+        border: 1px solid black;
+    }
+    /* About Us */
+    .aboutUsContent1 {
+           text-align: justify;
+           margin-bottom: 80px;
+       }
+
+       .aboutUsContent2 h3 {
+         text-transform: uppercase;
+         font-weight: 600;
+       }
+
+       .aboutUsContent1 h3 {
+         text-transform: uppercase;
+         font-weight: 600;
+       }
+
+       .aboutUsContent2 {
+         text-align: justify;
+       }
+
+       #bcitlogo {
+        margin-top: 80px;
+        float: right;
+        width: 460px;
+        margin-left: 50px;
+      }
+
+       #us-Img {
+         width: 100%;
+         float: left;
+         margin-right: 50px;
+       }
+
+       #about-p2 {
+         float: left;
+       }
+
+    /* Membership Page */
+
+.bannerMember .contentMid {
+    top:100px;
+}
+    .form {
+        margin-left:100px;
+        position: relative;
+        z-index: 1;
+
+        max-width: 800px;
+
+    }
+.registerForm {
+    float:left;
+    width:360px;
+    margin-left:auto;
+    margin-right:auto;
+    background: #FFFFFF;
+    margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.signinForm{
+    float:right;
+    width:360px;
+      margin-left:auto;
+    margin-right:auto;
+    background: #FFFFFF;
+    margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+    .form input {
+        font-family: "Roboto", sans-serif;
+        outline: 0;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .form .submit {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #3D718F;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .form button:hover,
+    .form button:active,
+    .form button:focus {
+        background: #154560;
+    }
+
+    .form .message {
+        margin: 15px 0 0;
+        color: #b3b3b3;
+        font-size: 12px;
+    }
+
+    .form .message a {
+        color: #3D718F;
+        text-decoration: none;
+    }
+
+    .signintitle {
+        color: #3D718F;
+        font-weight: bold;
+    }
+
+    #bodysignin .contentMid {
+        background: #3D718F;
+        background: linear-gradient(to left, #3D718F, #154560);
+        font-family: "Roboto", sans-serif;
+    }
+        #passreqlist {
+            font-weight: bold;
+            position:absolute;
+            list-style-type: none;
+            background-color: white;
+            list-style-type: none;
+            visibility: hidden;
+            top:400px;
+            right:190px;
+            z-index:10;
+            padding:10px;
+            border:solid;
+            border-radius:25px;
+        }
+
+/* Error Register*/
+.errorMessage {
+
+     margin-bottom:15px;
+     color: red;
+        display: block;
+}
+
+
+    /* Forum */
+
+.newPost {
+    position:absolute;
+    top:1px;
+    right:20px;
+}
+.forumContent {
+    position: absolute;
+    width:60%;
+    right:10px;
+    background-color:white;
+    padding:20px;
+    display:none;
+    z-index:10;
+    border:solid;
+    border-radius:25px;
+}
+    /* footer */
+
+    .footer {
+        position: static;
+        bottom: 0;
+        padding: 20px;
+        background-color: #606466;
+        color: lightgray;
+        text-transform: uppercase;
+    }
+
+    .footerContent {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+.icon {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+        /*media*/
+
+        @media only screen and (max-width:900px) {
+        .dropdown:hover .dropdown-menu {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            margin-top: 0px;
+        }
+        .resize {
+            display: none;
+        }
+        .navbar-inverse {
+            height: auto;
+        }
+        .wrap {
+            position: relative;
+        }
+        .bannerAbout {
+            display: none;
+        }
+        .bannerSlopes {
+            display: none;
+        }
+        .col-sm-6 {
+            font-size: 100%;
+        }
+        .footer {
+            font-size: 100%;
+        }
+        .col-sm-12 {
+            font-size: 100%;
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        .test {
+            display: none;
+        }
+        .test1 {
+            display: none;
+        }
+        .col-sm-12 {
+            font-size: 100%;
+        }
+        .col-sm-6 {
+            font-size: 80%;
+        }
+        .footer {
+            font-size: 80%;
+        }
+        .aboutUsContent1 p {
+            margin-left: 0px;
+            text-align: center;
+        }
+        .aboutUsContent2 p {
+            margin-right: 0px;
+            text-align: center;
+        }
+        .footer {
+            width: 100%;
+            position: fixed;
+        }
+    }
+
+    @media only screen and (max-width:770px) {
+        .col-sm-4 {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+
+    @media only screen and (max-width:600px) {
+        .footer {
+            font-size: 80%;
+            position: static;
+        }
+        .icon {
+            height: 30px;
+        }
+    }
+
+    @media only screen and (max-width:400px) {
+        .col-sm-12 {
+            font-size: 80%;
+        }
+        .col-sm-6 {
+            font-size: 80%;
+        }
+        .footer {
+            font-size: 80%;
+            position: static;        }
+    }
+
+    @media only screen and (max-width:200px) {
+        .col-sm-12 {
+            font-size: 80%;
+        }
+        .col-sm-6 {
+            font-size: 80%;
+        }
+        .footer {
+            font-size: 80%;
+        }
+    }
