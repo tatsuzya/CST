@@ -1,0 +1,4 @@
+chmod +x scriptname
+
+./scriptname threadname1 > fifo1& ./scriptname threadname2 >fifo2&
+./a.out

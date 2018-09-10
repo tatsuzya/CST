@@ -1,0 +1,451 @@
+<---- chapter 1 ---->
+kernel vs user
+- kernel
+  - executing code has complete and unrestricted access to underlying hardware
+  - can execute any CPU instruction and reference any memory address
+  - generally reserved for lowest - level, most trusted functions of the operating system
+  - crashes are often catastrophic
+- user
+  - executing code has no ability to directly access hardware or reference memory
+  - must delegate to system APIs to access hardware or memory
+  - crashes are often recoverable
+
+programming interface
+1. file (abstraction provided by OS)
+2. virtual memory (each program has its own memory)
+3. process (executing problem)
+
+caching system issues
+1.  when to put new item into cache
+2.  which cache line to put new item in
+3.  which item to remove from cache when a slot is needed
+4.  where to put a newly evicted item in larger memory
+
+cache
+- replacement policy determines which cache line to evict to make room for given new location
+  - if replacement policy is free to replace any line, we say the cash is fully associative
+  - if there is only 1 line that can be replaced, we say the cache is direct mapped
+  - if we can choose from a set of k lines to replace, we way the cache is k-way set associative
+
+list of linux command:
+- ls : display files in current directory
+- ls -l : display detailed info of files in current directory
+- cp : copy file
+- rm : remove
+- -i : warning
+- mkdir : create directory
+- cd : change directory
+- man : documentation
+
+read/write
+- read return 3 values
+  - 0   = eof
+  - -1  = fail
+  - +   = number of byte read
+- 0 : read from keyboard
+- 1 : display to stdout
+- ie.
+  nbytes = read(0, buffer, 100); // read from buffer with size 100
+  write(1, buffer, nbytes); // write to stdout with buffer size of nbytes
+
+process
+- key concept in all operating systems
+- associated with an address space
+- associated with set of resources
+- can be thought of as a container (hold all info needed to run program)
+
+process management pseudocode
+while(1){
+  prompt();                         // prompt message
+  read(command, parameters);        // read user input
+
+  if(fork() ! = 0){
+  /* parent code */
+  waitpid(-1, &status, 0);          // wait for child to finish
+  }else{
+    /* child code */
+    execve(command, parameters, 0); // execve command
+  }
+}
+
+fork() system call
+- create a new process
+- create exact code of the original
+- return 3 value
+  - -1 : fork failed (return perror)
+  - 0  : child process
+  - +  : parent process
+- ie.
+  int main(void){
+    pid_t pid;
+
+    pid = fork();
+
+    if(pid == -1){      // error
+      perror("fork");
+      return 1;
+    }else if(pid > 0){  // parent
+      do something
+    }else{              // child
+      do something
+    }
+    return 0;
+  }
+- ** important ** : zombie process occur when parent didn't called wait when child died
+  - zombie process is bad as each retain its PID and Linux has finite number of PID
+  - wait() system call : stop process until child die
+
+exec functions
+- execl (list)
+- execv (vector)
+- execle / execve (environment)
+- execlp / execvp (path)
+  - ie.
+    - execlp("ls", "ls", "-l", (char *) 0)
+    - execvp(cmd[0], cmd);
+
+memory layout of a processes
+
+  stack
+    |
+    v
+   gap(local variable)
+    ^
+    |
+   heap
+
+   data(global/static variable)
+
+   text(machine code ** not allowed to be modified **)
+- data can be initialized or uninitialized
+  - uninitialized is default as 0
+- ie.
+  int a[1000];        // uninitialized
+  int b[1000] = {1};  // uninitialized
+
+  int main(void){
+    int x = 1;
+    int *p = malloc(1000 * sizeof(int));
+    printf("main : &p\n", (void*)p);
+    return 0;
+  }
+
+concurrent vs parallel execution
+- concurrent
+  - 2 or more calculation happen within same time frame
+  - usually has dependency between calculations
+- parallel
+  - 2 or more calculation happen simultaneously
+segmentation fault: access memory that is not allowed
+
+monolithic vs microkernel
+- monolithic
+  - advantage
+    - faster
+    - less code & bug
+    - small size
+  - disadvantage
+    - hard to make changes
+    - single point of failure
+    - require full compilation when dealing with adding/fixing code
+- microkernel
+  - advantage
+    - no single point of failure
+    - easy maintenance
+    - easy load/unload
+    - extensibility
+    - easy integration
+  - disadvantage
+    - memory footprint is large
+    - potential performance loss
+    - message passing bug
+    - process management is complex
+
+<---- chapter 2 ---->
+process creation
+1. system initialization
+2. execution of a process creation
+3. user request to create a new process
+4. initiation of a batch job
+
+process termination (process is terminated and release CPU after completing execution)
+1. normal exit (voluntary)
+   - process complete all task and release CPU
+2. error exit (voluntary)
+3. fatal error (involuntary)
+4. killed by another process (involuntary)
+
+process states
+1. running (actually using CPU at that instant)
+2. ready (runnable; temporarily stopped)
+3. blocked (unable to run until external events happens)
+
+sequential vs concurrent
+- sequential
+  - designed for writing sequential programs and have no linguistic constructs for describing concurrent computation
+  - ie.
+    while(1){
+      read request
+      handle request
+    }
+- concurrent
+  - designed for writing concurrent program and have special constructs for expressing concurrency in language itself
+  - ie.
+    while(1){
+      read request
+      fork to handle request
+    }
+    create a thread
+
+CPU utilization
+- ie. 3 processes & 80% I/O wait
+  - P (at least 1 process is executing)
+  - 1 - P (no process is executing)
+  - 1 - p (all process are waiting)
+  - ans: 1 - 0.8 ^ 3
+- lower wait = higher utilization
+
+ps command
+- ps axj
+  - ppid  = parent process id
+  - pid   = process id
+  - pgid  = process group id (leader)
+  - sid   = session id (echo $$)
+  - tty   = teletypewriter
+  - tgid  = thread group id (-1 if no terminal)
+  - stat  = status (multi-character process state)
+  - uid   = user id
+- tracing (ppid = pid of previous process)
+  - file
+  - bash
+  - sshd:user@folder
+  - sshd:user[priv]
+  - /usr/sbin/sshd -D
+  - /sbin/init <--- always trace back to init
+
+threads
+- #include <pthread.h>
+- joinable (default)
+  - pthread_join(tid, &result);
+  - will not release any resource even after end of thread function, until some other thread calls pthread_join() with its ID
+  - blocking calls
+    - block calling thread until other thread ends
+  - return non-zero value for error
+- detachable
+  - pthread_detach(self)
+  - automatically release its allocated resources on exit
+  - no way to determine its return value
+  - when to use: when programmer wont want to wait for thread with pthread_join()
+- exit vs pthread_exit
+  - exit : terminate all processes
+  - pthread_exit : terminate calling thread
+
+user-level threads vs kernel-level threads
+- user
+  - thread management kernel is not aware of existence of thread
+  - contain code for creating/destroying threads, for passing message and data between threads, for scheduling thread execution and for saving and restoring thread contexts
+  - advantage
+    - thread switching does not require kernel mode privileges
+    - user level thread can run on any operating systems
+    - scheduling can be application specific in user level threads
+    - fast to create and manage
+  - disadvantage
+    - most system calls are blocking
+    - multithreaded application cannot take advantage of multiprocessing
+- kernel
+  - no thread management code
+  - supported directly by OS
+  - maintain context information for the process as whole and for individuals thread within the process
+  - scheduling is done on a thread basis
+  - perform thread creation, scheduling and management
+  - advantage
+    - can simultaneously schedule multiple threads from same process on multiple processes
+    - if one thread in a process is blocked, the kernel can schedule another thread of the same processes
+    - routines themselves can be multithreaded
+  - disadvantage
+    - generally slower to create and manage
+    - transfer of control from 1 thread to another within same process requires a mode switching to kernal
+
+multiprocessing vs multithreading
+- multiprocessing
+  - use thread
+  - run in separate memory space
+    - harder to share objects between processes
+  - ie.
+    - processer cores
+- multithreading
+  - use process
+  - run in same memory space
+    - precautions have to be taken or 2 threads will write to same memory at the same time
+  - ie.
+    - games
+    - web browser
+    - text editor
+
+race condition
+- occur when 2 or more threads want to access shared memory at the same time
+  - the order in which thread will attempt to access the shared data is unknown as the thread scheduling algorithm can swap between threads at any time
+    - result of change in data is dependent on thread scheduling algorithm
+
+critical region
+1. no 2 process may be simultaneously inside their critical regions (**required**)
+2. no assumption may be made about speed or the number of CPUs
+3. no process running outside its critical region may block other processes
+4. no process should have to wait forever to enter its critical region
+
+
+semaphore
+- atomic action
+  - indivisible and non-interruptible under any circumstances until it finishes its tasks
+- up & down operation
+  - increment or decrement counters
+- mutex
+  - lock
+    - 0 = unlocked
+    - 1 = locked
+  ie. producer and consumer pseudocode
+  typedef int semaphore
+  semaphore mutex = 1;
+  semaphore empty = 100;
+  semaphore full = 0;
+
+  producer{
+    generate(item); // generate item
+    down(empty);    // decrement empty counter
+    down(mutex);    // enter critical region (lock other thread from entering critical region)
+    insert(item);   // insert item
+    up(mutex);      // exit critical region (unlock entry to critical region)
+    up(full);       // increment full counter
+  }
+  consumer{
+    down(full);     // decrement full counter
+    down(mutex);    // enter critical region
+    remove(item);   // take item to be consumed
+    up(mutex);      // exit critical region
+    up(empty);      // increment empty counter
+    consume(item);  // consume item
+  }
+
+mutex & condition variables
+- similar to semaphores but use a variable as counter to synchronize thread
+- ie. producer and consumer pseudocode
+  mutex;
+  not_empty, not_full;
+
+  producer{
+    lock(mutex);        // enter critical regions
+    wait(not_full);     // wait for buffer to have spaces to generate items
+    generate(item);     // generate items
+    signal(not_empty);  // wake up consumer
+    unlock(mutex);      // exit critical regions
+  }
+  consumer{
+    lock(mutex);        // enter critical regions
+    wait(not_empty);    // wait for buffer to have items
+    consume(item);      // consume item
+    signal(not_full);   // wake up producer
+    unlock(mutex);      // exit critical region
+  }
+
+semaphore vs mutex
+- semaphore (signaling mechanism)
+  - integer variable
+    - can be modified by any process that acquire or release resource by performing wait() and signal()
+  - used when thread want to sleep until some other thread tells it to work up
+  - up operation can happen in producer while down operation can happen in consumer
+    - allow multiple program threads to access finite instance of resources
+  - related to signaling
+    - signal for interrupt
+- mutex (locking mechanism)
+  - object
+    - lock
+      - can only be released by the process that has acquired the lock on mutex object
+  - used when thread want to execute code that should not be executed by any other thread at the same time
+  - up / down operation must happen in the same thread
+    - allow multiple program thread to access a single resource but not simultaneously
+  - related to allowing access to 1 at time
+scheduling in bash systems
+- First Come First Served (FCFS)
+  - advantage
+    - no complex logic
+    - every process will get chance to run, therefore no starvation
+  - disadvantage
+    - no option for pre-emption of process
+    - wait time is depended on execution of previous process
+- Shortest Process First (SPF)
+  - advantage
+    - throughput is increased because more processes can be executed in less amount of time
+  - disadvantage
+    - longer processes will have more waiting time, eventually they'll suffer starvation
+    - time taken by a process must be known by CPU beforehand
+- Shortest Remaining Time (SRT)
+  - advantage
+    - allow for preemption
+      - reduce wait time over non-pre-emptive version
+      - short jobs completed quickly
+  - disadvantage
+    - time gain diminished by need of context switching
+- Round Robin (RR)
+  - advantage
+    - easy to implement as it is not based on characteristics of processes
+    - allocate CPU fairly
+  - disadvantage
+    - performance depend on selection of good time quantum
+- average wait time: sum of (start time - arrival time) of each process / number of process
+- average transfer time: sum of (completion time - arrival time) of each process / number of process
+
+<---- chapter 3 ---->
+memory abstraction
+- to allow several programs to co-exist in memory
+  - protection
+    - process need to acquire permission to reference memory locations for reading or writing purposes
+    - location of a program is unpredictable
+    - memory references generated by process must be checked at run time
+  - relocation
+    - active processes need to be able to be swapped in and out of main memory in order to maximize processor utilization
+    - specify that a process must be placed in same memory region when it is swapped back in would be limiting
+  - sharing
+    - allow each process access to same copy of program rather than have own separate copy
+    - memory management must allow controlled access to shared areas of memory without compromising protection
+  - logical organization
+  - physical organization
+    - hierarchy
+      - levels of caches
+      - main memory
+      - disk
+  - address space
+    - base & limit (can only be modified by OS)
+      - base : start address of a program in physical memory
+        - added to address
+      - limit : length of the program
+        - result compared to limit
+    - map each process address space onto a different part of physical memory
+
+swapping
+- programs move in and out of memory
+- holes are created
+  - can be combined into memory compaction
+
+managing free memory : linked list
+- first fit
+- next fit
+- best fit
+- worst fit
+
+memory management techniques
+- bring process into main memory for execution by the processor
+  - virtual memory
+    - each program has it own address space, broken up into chunks called pages
+
+paging
+- page = 1 of numerous equally sized chunks of memory
+- page table = store pages
+- main memory = divided into page frame (space large enough to hold 1 page of data)
+- page number(virtual memory)
+  - total virtual memory size / size of single page
+- page_size
+  - total address - virtual memory
+- entries in inverted page table
+  - total physical memory size / page_size(frame)
+
+chapter 4
