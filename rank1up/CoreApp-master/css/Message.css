@@ -1,0 +1,86 @@
+.address {
+    margin-bottom: 10px;
+}
+
+.message-card {
+    width: 55%;
+    margin: auto;
+}
+
+.message-container {
+    margin-top: -20px;
+}
+
+.message-text {
+    margin-top: 16px;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: white;
+}
+
+.timestamp {
+    text-align: right;
+}
+
+.indicator {
+    background-color: purple !important;
+}
+
+.message-search-results {
+    position: absolute;
+    z-index: 999;
+    margin-top: -6px;
+    padding: 12px;
+    width: 50%;
+    background-color: white;
+    color: black;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message-result-li {
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.message-result-li:hover {
+    background-color: lightgray;
+}
+
+.message-title {
+    font-weight: 500;
+}
+
+#cke_ckeditor {
+    border: none;
+}
+
+#sendBtn {
+    margin-top: 16px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .message-card {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .message-card {
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 736px) {
+    .message-card {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .message-card {
+        width: 80%;
+    }
+}

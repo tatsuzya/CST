@@ -1,0 +1,84 @@
+<html>
+   <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous" />
+        <link type="text/css" rel="stylesheet" href="css/UserProfile.css" />
+        <link type="text/css" rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   </head>
+   <body>
+        <div class="preloader center">
+            <img src="img/rankup.png">
+            <div class="progress white">
+                <div class="indeterminate purple"></div>
+            </div>
+        </div>
+        <div class="page-content">
+            <nav class="nav-container purple"></nav>
+            <div class="profile-content row">
+                <div class="col s12">
+                    <div class="card">
+                        <div id="profileId" class="card-content purple white-text center">
+                            <div class="name-btn right">
+                                <div class="edit-btn-container" hidden>
+                                    <a id="editNameBtn" class="waves-effect waves-light white-text edit"><i class="material-icons">edit</i></a>
+                                    <a id="saveNameBtn" class="waves-effect waves-light white-text edit" hidden><i class="material-icons">save</i></a>
+                                </div>
+                            </div>
+                            <div class="profile-img-container">
+                                <div class="profile-img-frame"></div>
+                                <div class="img-overlay edit-btn-container" hidden><a id="editImgBtn" class="white-text edit modal-trigger" data-target="imgModal"><i class="material-icons">edit</i></a></div>
+                            </div>
+                            <input class="profile-name white-text center" disabled/>
+                        </div>
+                        <div class="card-content profile-badge-container">
+                            <div class="card-title">Badges</div>
+                            <div class="profile-badge-frame">No badges</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="desc-title card-title">Description</div>
+                            <div class="desc-btn">
+                                <div class="edit-btn-container" hidden>
+                                    <a id="editDescBtn" class="waves-effect waves-light edit"><i class="material-icons left">edit</i></a>
+                                    <a id="saveDescBtn" class="waves-effect waves-light edit" hidden><i class="material-icons left">save</i></a>
+                                </div>
+                            </div>
+                            <textarea name="ckeditor" id="ckeditor"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="imgModal" class="modal">
+                <div class="modal-content">
+                    <div class="center purple-text">Upload a profile image (jpg/png max 100KB)</div>
+                    <form action="#">
+                        <div class="file-field input-field">
+                            <div class="btn purple">
+                                <span>file</span>
+                                <input id="imgInput" type="file" accept=".png,.jpg,.jpeg">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a id="uploadBtn" class="modal-close waves-effect btn-flat purple white-text right">upload</a>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+        <script src="strings/messages.js"></script>
+        <script src="js/AppBar.js"></script>
+        <script src="class/User.js"></script>
+        <script src="Model/UserProfileModel.js"></script>
+        <script src="View/UserProfileView.js"></script>
+        <script src="Controller/UserProfileController.js"></script>
+        <script src="js/UserProfile.js"></script>
+   </body>
+</html>

@@ -1,0 +1,202 @@
+body {
+    background-color: purple;
+    transition: 0.1s ease;
+}
+
+input:focus {
+    border-bottom: 1px solid purple !important;
+    box-shadow: 0 1px 0 0 purple !important;
+}
+
+input.valid {
+    border-bottom: 1px solid purple !important;
+    box-shadow: 0 1px 0 0 purple !important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #fafafa inset !important;
+}
+
+label {
+    line-height: initial;
+}
+
+.filterusers {
+    overflow: auto;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: purple;
+}
+
+.nav-container {
+    box-shadow: none;
+}
+
+.nav-inner {
+    width: 60%;
+    margin: auto;
+}
+
+.mini-logo, .nav-logo {
+    height: 100% !important;
+}
+
+.mini-logo {
+    display: none;
+}
+
+.result-li {
+    width: 100%;
+}
+
+.search-ul {
+    margin-left: 1rem;
+    width: 50%;
+}
+
+.searchbar {
+    padding: 12px;
+}
+
+.search-results {
+    position: absolute;
+    z-index: 999;
+    margin-top: -6px;
+    padding: 12px;
+    width: 50%;
+    background-color: white;
+    color: black;
+    min-height: 260px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#rankupLogo, .preloader{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin-top: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.5s ease;
+}
+
+.page-content {
+    opacity: 0;
+    transition: 0.1s ease;
+}
+
+.progress {
+    width: 20%;
+    margin: auto;
+}
+
+#search {
+    border-radius: 50px;
+}
+
+#userMenu {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .nav-inner {
+        width: 80%;
+    }
+
+    .search-ul {
+        margin-left: 1rem;
+        width: 50%;
+    }
+
+    .search-results {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .nav-inner {
+        width: 85%;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .mini-logo {
+        display: block;
+    }
+
+    .search-ul {
+        margin-left: 1rem;
+        width: 40%;
+    }
+    .search-results {
+        width: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 736px) {
+    nav ul a {
+        padding: 0 10px;
+    }
+
+    .nav-inner {
+        width: 85%;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .mini-logo {
+        display: block;
+    }
+
+    .search-ul {
+        margin-left: 1rem;
+        width: 35%;
+    }
+
+    .search-results {
+        width: 60%;
+    }
+
+    #rankupLogo {
+        margin-top: 30vh;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    nav ul a {
+        padding: 0 10px;
+    }
+    
+    .nav-inner {
+        width: 98%;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .mini-logo {
+        display: block;
+    }
+
+    .search-ul {
+        margin-left: 0;
+        width: 30%;
+    }
+
+    .search-results {
+        width: 70%;
+    }
+
+    #rankupLogo {
+        margin-top: 10vh;
+    }
+}

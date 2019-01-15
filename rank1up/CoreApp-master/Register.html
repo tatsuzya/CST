@@ -1,0 +1,50 @@
+<html>
+   <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous" />
+        <link type="text/css" rel="stylesheet" href="css/main.css" />
+        <link type="text/css" rel="stylesheet" href="css/Register.css" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   </head>
+   <body>
+        <div class="preloader center">
+            <img src="img/rankup.png">
+            <div class="progress white">
+                <div class="indeterminate purple"></div>
+            </div>
+        </div>
+        <div class="page-content">
+            <nav class="nav-container purple"></nav>
+            <h4 class="page-title center purple-text">Sign Up</h4>
+            <form class="register-form container row" onsubmit="return false">
+                <div class="form-inputs">
+                    <input id="email" type="email" class="validate" required="true" aria-required="true">
+                    <label for="email" class="purple-text">Email</label>
+                    <input id="fName" type="text" class="validate" required="true" aria-required="true">
+                    <label for="fName" class="purple-text">First Name</label>
+                    <input id="lName" type="text" class="validate" required="true" aria-required="true">
+                    <label for="lName" class="purple-text">Last Name</label>
+                    <input id="password" type="password" class="validate" required="true" aria-required="true">
+                    <label for="password" class="purple-text">Password</label>
+                    <input id="cpassword" type="password" class="validate" required="true" aria-required="true">
+                    <label for="cpassword" class="purple-text">Confirm Password</label>
+                </div>
+                <div class="center">
+                    <button id="submitBtn" class="btn waves-effect waves-light purple" type="submit" name="action">Submit</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
+        <script src="strings/messages.js"></script>
+        <script src="js/AppBar.js"></script>
+        <script src="class/User.js"></script>
+        <script src="Model/RegisterModel.js"></script>
+        <script src="View/RegisterView.js"></script>
+        <script src="Controller/RegisterController.js"></script>
+        <script src="js/Register.js"></script>
+   </body>
+</html>

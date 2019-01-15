@@ -1,0 +1,29 @@
+.settings-form {
+    width: 30%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1280px) {
+    .settings-form {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .settings-form {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (max-width: 736px) {
+    .settings-form {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .settings-form {
+        width: 70%;
+    }
+}

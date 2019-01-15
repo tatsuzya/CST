@@ -1,0 +1,64 @@
+.nav-logo {
+    display: none;
+}
+
+.app-links {
+    width: 60%;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+.app-card {
+    min-height: 200px;
+}
+
+.badge {
+    margin-top: 30px;
+}
+
+.badge-icon {
+    font-size: 40 !important;
+}
+
+.signin-message {
+    margin-top: 50px;
+    color: purple;
+}
+
+#linkText {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1280px) {
+    .app-links {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .app-links {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (max-width: 736px) {
+    .app-links {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .app-links {
+        width: 90%;
+    }
+
+    .badge {
+        margin-top: 10px;
+    }
+
+    .app-card {
+        min-height: 160px;
+    }
+}

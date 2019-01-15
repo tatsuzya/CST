@@ -1,0 +1,57 @@
+.desc-container {
+    width: 40%;
+    margin: 5vh auto;
+}
+
+.register-form {
+    width: 30%;
+}
+
+.form-inputs {
+    margin: 5vh 0;
+}
+
+#saveBtn {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1280px) {
+    .register-form {
+        width: 35%;
+    }
+
+    .desc-container {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .register-form {
+        width: 40%;
+    }
+
+    .desc-container {
+        width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 736px) {
+    .register-form {
+        width: 55%;
+    }
+
+    .desc-container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .register-form {
+        width: 70%;
+    }
+
+    .desc-container {
+        width: 80%;
+    }
+}

@@ -1,0 +1,46 @@
+.login-form {
+    width: 30%;
+}
+
+.form-inputs {
+    margin: 5vh 0;
+}
+
+#forgotPass {
+    display: block;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+#forgotPassModal {
+    width: 400px;
+}
+
+#forgotPassForm {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    .login-form {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .login-form {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (max-width: 736px) {
+    .login-form {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .login-form {
+        width: 70%;
+    }
+}

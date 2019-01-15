@@ -1,0 +1,70 @@
+<html>
+   <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha256-OweaP/Ic6rsV+lysfyS4h+LM6sRwuO3euTYfr6M124g=" crossorigin="anonymous" />
+        <link type="text/css" rel="stylesheet" href="css/main.css" />
+        <link type="text/css" rel="stylesheet" href="css/Login.css" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   </head>
+   <body>
+        <div class="preloader center">
+            <img src="img/rankup.png">
+            <div class="progress white">
+                <div class="indeterminate purple"></div>
+            </div>
+        </div>
+        <div class="page-content">
+            <nav class="nav-container purple"></nav>
+            <h4 class="center purple-text">Sign In</h4>
+            <form class="login-form container row" onsubmit="return false">
+                <div class="form-inputs">
+                    <input id="email" type="email" class="validate" required="true" aria-required="true">
+                    <label for="email" class="purple-text">Email</label>
+                    <input id="password" type="password" class="validate" required="true" aria-required="true">
+                    <label for="password" class="purple-text">Password</label>
+                    <a id="forgotPass" class="modal-trigger" data-target="forgotPassModal">Forgot my password</a>
+                </div>
+                <div>
+                    <a id="signUpLink" href="Register.html">Sign up for an account</a>
+                    <button id="submitBtn" class="btn waves-effect waves-light purple right" type="submit" name="action">Sign In</button>
+                </div>
+            </form>
+            <div id="forgotPassModal" class="modal">
+                <form id="forgotPassForm" onsubmit="return false">
+                    <div class="modal-content">
+                        <p>Enter your recovery email</p>
+                        <input id="recoveryEmail" type="email" class="validate" required="true" aria-required="true">
+                        <label for="recoveryEmail" class="purple-text">Email</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="recoverBtn" class="btn waves-effect waves-light purple right" type="submit" name="action">Recover</button>
+                    </div>
+                </form>
+                <form id="newPassForm" onsubmit="return false" hidden>
+                    <div class="modal-content">
+                        <p>Check your email for the code to set new password</p>
+                        <input id="code" type="text" class="validate" required="true" aria-required="true">
+                        <label for="code" class="purple-text">Code</label>
+                        <input id="newPass" type="password" class="validate" required="true" aria-required="true">
+                        <label for="newPass" class="purple-text">New password</label>
+                        <input id="cnewPass" type="password" class="validate" required="true" aria-required="true">
+                        <label for="cnewPass" class="purple-text">Confirm password</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="setBtn" class="btn waves-effect waves-light purple right" type="submit" name="action">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha256-U/cHDMTIHCeMcvehBv1xQ052bPSbJtbuiw4QA9cTKz0=" crossorigin="anonymous"></script>
+        <script src="strings/messages.js"></script>
+        <script src="js/AppBar.js"></script>
+        <script src="Model/LoginModel.js"></script>
+        <script src="View/LoginView.js"></script>
+        <script src="Controller/LoginController.js"></script>
+        <script src="js/Login.js"></script>
+   </body>
+</html>
